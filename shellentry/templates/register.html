@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+</head>
+<style type="text/css">
+	.abc{
+		background-color: yellow;
+		border: 2px solid;
+		
+
+	}
+</style>
+<body>
+	<h1>This is registration page</h1>
+	<form method="POST" action="{% url 'register' %}">
+		{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit">
+	<!-- {{form.as_ul}} -->
+	<!-- {{form.as_table}} -->
+
+    </form>
+    <h1>{{data.name | upper}}</h1>
+</body>
+</html>

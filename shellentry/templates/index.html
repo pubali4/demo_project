@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample</title>
+</head>
+<body>
+	<!-- <h1>welcome {{name}}</h1> -->
+	<form method="POST" action="{% url 'index' %}">
+		{% csrf_token %}
+		<label>Enter your full name : </label>
+		<input type="text" name="fullname">
+		<input type="submit">
+	</form>
+
+	<h1>welcome {{name}}</h1>
+	<h1><a href="{% url 'register' %}">Click me to go to registration page</a></h1>
+
+</body>
+</html>
